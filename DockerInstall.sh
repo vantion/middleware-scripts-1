@@ -30,10 +30,10 @@ if
    #Docker installation on Centos 7 launched...
    yum remove docker docker-client docker-client-latest docker-common docker-latest docker-latest-logrotate docker-logrotate docker-engin ec
    sleep 1
-   yum install -y yum-utils
-   yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
+   yum install yum-utils -y
+   yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo -y
    sleep 2 
-   sudo yum install docker-ce docker-ce-cli contained.io
+   sudo yum install docker-ce docker-ce-cli contained.io -y
    sleep 2
    #Start and enable  the daemon 
    systemctl start  docker
@@ -62,7 +62,7 @@ elif
        apt-get remove docker docker-engine docker.io containerd runc -y
        sleep 1
        apt-get update
-       apt-get install ca-certificates curl gnupg lsb-release 
+       apt-get install ca-certificates curl gnupg lsb-release -y 
        sleep 2
        curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
        sleep 1
@@ -71,7 +71,7 @@ elif
        sleep 1
 #________________________________________________________________
     #The commented out command below throwing error messages so docker.io is my alternative here. 
-    apt install docker.io 
+    apt install docker.io -y
     # apt-get upgdatevim
     # apt-get install docker-ce docker-ce-cli containerdvim.io
 #________________________________________________________________

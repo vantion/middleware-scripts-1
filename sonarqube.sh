@@ -20,7 +20,8 @@ sleep 1
 echo "System in the process of retrieving current ip address..."
 sleep 2
 echo "Below is your IP Address : " 
-sudo ifconfig | grep 192.
+sudo hostname -I|awk '{print $2}'
+#sudo ifconfig | grep 192.
 
 
 

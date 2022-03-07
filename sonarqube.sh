@@ -1,6 +1,7 @@
 #!/bin/bash
 #Description: Installation of Sonarqube on CentOS7
-#Author: Ted Gadie 
+#Author: Ted Gadie
+#Date: 3/5/2022
 
 
 echo "Sonarqube installation on Centos 7 in progress ..."

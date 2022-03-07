@@ -7,7 +7,7 @@
 #               That user account will be given access to all Docker commands.
 # How to create a user account ?
 # useradd username
-# passwd username
+# passwd username   
 
 BIT=`getconf LONG_BIT`
 user=`whoami`

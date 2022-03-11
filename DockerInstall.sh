@@ -69,12 +69,9 @@ elif
        echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/kyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu \
   $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
        sleep 1
-#________________________________________________________________
-    #The commented out command below throwing error messages so docker.io is my alternative here. 
     apt install docker.io -y
-    # apt-get upgdatevim
+    # apt-get update vim
     # apt-get install docker-ce docker-ce-cli containerdvim.io
-#________________________________________________________________
        sleep 1
        #Start and enable  the daemon 
        systemctl start  docker

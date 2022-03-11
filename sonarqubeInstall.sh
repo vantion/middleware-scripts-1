@@ -20,10 +20,9 @@ echo "system starting Sonarqube now..."
 sleep 1
 echo "System in the process of retrieving current ip address..."
 sleep 2
-echo "Below is your IP Address : " 
-sudo hostname -I|awk '{print $2}'
-#sudo ifconfig | grep 192.
-
+echo "Follow the link below to access the application on the browser : "
+ipaddr=`hostname -I |awk '{print$2}'`
+echo -e  "\n http://$ipaddr:8080 \n"
 
 
 #NB: Some servers have firewall enabled. So if you are not able to connect 

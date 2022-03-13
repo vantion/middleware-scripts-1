@@ -1,6 +1,8 @@
 #!/bin/bash 
 #Author: Ted Gadie
+#Date  : 3/12/2022
 #Description:  REMOVE ALL IMAGES AND EXITED CONTAINERS ON THE SERVER
+
 
 user=`whoami`
 GROUP=`groups $user|awk '{print$4}'`

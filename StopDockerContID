@@ -1,0 +1,24 @@
+#!/bin/bash
+#Author: Ted Gadie
+#Date: 3/13/2022
+#Description: [STOP ALL RUNNING DOCKER CONTAINERS]
+
+
+user=`whoami`
+GROUP=`groups $user|awk '{print$4}'`
+
+#User authentication before running the program
+if [[ ${GROUP} != docker ]] && [[ ${user} != root ]]
+    then 
+    echo " Only members of the group Docker are allowed to run this program !"
+    exit 2
+fi
+docker ps -q > /tmp/ContID
+for id in $(cat /tmp/ContID);
+do 
+   ID=`docker stop $id`
+   echo " $ID container stopped."
+done
+echo -e "\nAll running Containers were successfully stopped.\n"
+ 
+
